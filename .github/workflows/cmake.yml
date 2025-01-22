@@ -55,7 +55,7 @@ jobs:
       working-directory: ${{github.workspace}}/build
       run: ctest -C ${{env.BUILD_TYPE}}
       
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v4
       with:
         name: binaries
         path: ${{github.workspace}}/build/*.xpl
@@ -73,7 +73,7 @@ jobs:
           name: binaries
           path: XP11WindowApiSample/64
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: XP11WindowApiSample_plugin
           path: |
